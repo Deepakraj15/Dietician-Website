@@ -1,0 +1,82 @@
+body{
+    background-image: url(/Dietician-env/images/background-homepage.webp);
+    background-size:100%;
+}
+.nav-bar
+{
+    display:flex;
+    align-items:center;
+    background-color:blue;
+    width:100%;
+    height:60px;
+    border:10px soild black;
+}
+.brandname
+{
+}
+a{
+    
+    font-size: 20px;
+    color:black;
+    font-weight:700;
+    text-decoration: none;
+}
+.homepage-container
+{
+    border:1px soild red;
+    display: flex;
+    
+}
+.quote
+{
+    font-size:40px;
+    display:flex;
+    margin-top:150px;
+    font-weight: 700;
+    font-style: italic;
+    text-indent: 2px;
+}
+.blur-box
+{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top:30px;
+    height:500px;
+    width:700px;
+    background-color:whitesmoke;
+}
+
+.login-form
+{
+    border-radius:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 60%;
+    height:60%;
+}
+input
+{
+    height:17px;
+    background-color:black;
+    color:wheat;
+    border-radius: 10px;
+}
+label{
+    font-size: 17px;
+    font-weight: 700;
+}
+.buttoncont
+{
+    width:100%;
+}
+.login-btn{
+    
+    height:25px;
+    color:white;
+    background-color: black;
+    border-radius:5px;
+    width:100%;
+}
