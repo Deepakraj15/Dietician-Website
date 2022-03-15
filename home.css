@@ -1,0 +1,21 @@
+body
+{
+    background-image: url(/images/background.webp);
+    background-size:cover;
+}
+.home-contanier
+{
+    display: flex;
+    align-items: center;
+    width: 1500px;
+    height: 750px;
+    
+    
+}
+.quote{
+    padding-left:35px ;
+    font-size: 40px;
+    font-weight: bold;
+    font-family:'Abril Fatface', cursive;;
+    color: azure;
+}
