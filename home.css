@@ -1,16 +1,55 @@
+
 body
 {
-    background-image: url(/images/background.webp);
+    /*
+        
+    background-image: url(/images/background.jpeg);
     background-size:cover;
+    
+    */
+    background-color: black;
 }
 .home-contanier
 {
+   position: relative;
+    width: 100%;
+    height: 1500px;
+    
+}
+.home-contanier footer
+{
+    bottom:0;
+    position:absolute;
+}
+.homepage-nav
+{
     display: flex;
     align-items: center;
-    width: 1500px;
-    height: 750px;
-    
-    
+    background-color:black;
+    width:100%;
+    height:110px;
+}
+.logo-img
+{
+    border-radius: 50%;
+    max-width: 120px;
+    max-height:120px;
+}
+.login-btn-home{
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight:700;
+    margin-left:50px;
+    height:40px;
+    width:90px;
+    background-color:#055958;
+    color:azure;
+    border-radius: 15px;
+}
+.login-btn-home:hover{
+    background-color:#055958;
+    color:black;
+    transform: translateY(-2px);
 }
 .quote{
     padding-left:35px ;
@@ -18,4 +57,71 @@ body
     font-weight: bold;
     font-family:'Abril Fatface', cursive;;
     color: azure;
+}
+.about a
+{
+    font-weight:bold;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: #055958;
+    margin-left:1100px;
+    text-decoration: none;
+}
+.footer-home
+{
+    border:#055958 solid 1px;
+    width:100%;
+    height:120px;
+    background-color: azure;
+    display:flex;
+    background-color: black;
+    align-items: center;
+}
+
+
+.footer-home div
+{
+    color: azure;
+}
+.footer-home div a
+{
+    text-decoration: none;
+    color:azure;
+}
+.contacts
+{
+    margin-left:100px;
+}
+.conditions-cont
+{
+    margin-left:200px;
+}
+.others
+{
+    margin-left: 200px;
+}
+.follow-us
+{
+    margin-left: 300px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+.follow-us .wrap a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:azure;
+    border-radius:50%;
+    margin-left:10px;
+}
+.follow-us .wrap a :hover{
+    background-color:#055958;
+    border-radius: inherit;
+}
+.follow-us img
+{
+    max-width: 50px;
+    max-height: 50px;
 }
