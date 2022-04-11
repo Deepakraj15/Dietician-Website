@@ -68,6 +68,13 @@ label,
 
 }
 
+select {
+    margin-left: 15px;
+    width: 150px;
+    height: 23px;
+    text-align: center;
+}
+
 .calculate-button {
     box-sizing: border-box;
     padding: 10px 0px 10px 0px;
@@ -99,11 +106,6 @@ label,
 button:hover {
     background-color: black;
     color: #055958;
-}
-
-.indicator {
-    max-width: 275px;
-    max-height: 275px;
 }
 
 .gauge {
