@@ -1,0 +1,165 @@
+* {
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: black;
+    width: 99%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.bmi-app {
+    background-color: azure;
+    width: 700px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+
+}
+
+.holder {
+    border: 1px solid red;
+    width: 500px;
+    height: 500px;
+    display: block;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border-radius: 9px;
+    height: 19px;
+    width: 175px;
+}
+
+label,
+.gen-text {
+    font-weight: 700;
+}
+
+.gender {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+/*inputs*/
+.weight,
+.height,
+.age {
+    box-sizing: border-box;
+    padding: 10px 0px 10px 0px;
+
+}
+
+.calculate-button {
+    box-sizing: border-box;
+    padding: 10px 0px 10px 0px;
+}
+
+.calculate {
+    color: azure;
+    background-color: #055958;
+    width: 175px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.clear {
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background-color: black;
+    color: #055958;
+}
+
+.indicator {
+    max-width: 275px;
+    max-height: 275px;
+}
+
+.gauge {
+    width: 100%;
+    max-width: 250px;
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    color: #055958;
+}
+
+.gauge__body {
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: #b4c0be;
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+}
+
+.gauge__fill {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    background: #055958;
+    transform-origin: center top;
+    transform: rotate(0.25turn);
+    transition: transform 0.2s ease-out;
+}
+
+.gauge__cover {
+    width: 75%;
+    height: 150%;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* Text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+}
+
+.text-result {
+    margin-top: 20px;
+    border: 1px solid red;
+    display: flex;
+    color: black;
+    width: 300px;
+    height: 100px;
+}

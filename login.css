@@ -1,110 +1,121 @@
-body{
-    background-image:url(/images/bg.webp);
-    background-size:100%;
-}
-.nav-bar
-{
-    margin:-10px 0 0 -10px;   
-    display:flex;
-    align-items:center;
-    background-color:black;
-    width:101.2%;
-    height:60px;
-    border:10px soild black;
+body {
+    background-image: url(/images/bg.webp);
+    background-size: 100%;
 }
 
-a{
-    
-    font-size: 20px;
-    color:whitesmoke;
-    font-weight:700;
-    text-decoration: none;
+.nav-bar {
+    margin: -10px 0 0 -10px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    width: 194vh;
+    height: 100px;
+    border: 10px soild black;
 }
-.homepage-container
-{
-    
+
+.homepage-container {
+
     display: flex;
     justify-content: center;
-    
+
 }
-.quote
-{
-    font-size:40px;
-    display:flex;
-    margin-top:150px;
+
+.quote {
+    font-size: 40px;
+    display: flex;
+    margin-top: 150px;
     font-weight: 700;
     font-style: italic;
     text-indent: 2px;
 }
-.blur-box
-{
+
+.blur-box {
     background-image: url(/images/blurbox\ image.jpg);
     background-size: 180%;
-    border-radius:30px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    margin-top:100px;
-    height:500px;
-    width:400px;
-    background-color:whitesmoke;
-}
-
-.login-form
-{
-    background-image: url(/images/blurbox\ image.jpg);
-    background-size:180%;
-    border-radius:30px;
+    border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:grey;
-    width: 80%;
-    height:85%;
-    box-shadow: 4px 4px 0px 0px black;
-    
+    margin-top: 100px;
+    height: 500px;
+    width: 400px;
+    background-color: whitesmoke;
 }
-input
-{
-    font-weight:bold;
-    font-size:15px;
-    height:27px;
-    background-color:gray;
-    color:black;
+
+.login-form {
+    background-image: url(/images/blurbox\ image.jpg);
+    background-size: 180%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    width: 80%;
+    height: 85%;
+    box-shadow: 4px 4px 0px 0px black;
+
+}
+
+input {
+    font-weight: bold;
+    font-size: 15px;
+    height: 24px;
+    background-color: gray;
+    color: black;
     border-radius: 15px;
 }
-label{
-    
+
+label {
+
     color: azure;
     font-size: 17px;
     font-weight: 700;
 }
-.buttoncont
-{
-    width:100%;
+
+.buttoncont {
+    width: 100%;
 }
-.login-btn{
+
+.login-btn {
     font-weight: bold;
-    height:30px;
-    color:white;
+    height: 30px;
+    color: white;
     background-color: black;
-    border-radius:10px;
-    width:100%;
+    border-radius: 10px;
+    width: 100%;
 }
-.login-btn:hover
-{
-    background-color:#05595B;
-    color:azure;
+
+.login-btn:hover {
+    background-color: #05595B;
+    color: azure;
     transform: translateY(-2px);
 }
-.login-wording{
-    
+
+.login-wording {
+
 
     text-align: center;
-    font-family:Arial, Helvetica, sans-serif;
-    letter-spacing:3px;
-    font-weight:bold;
-    font-size:43px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 43px;
     color: azure;
 }
 
+.brandname a img {
+    margin-left: 10px;
+    margin-top: 50px;
+    max-width: 100px;
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+a {
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.create-user {
+    margin-left: 200px;
+}

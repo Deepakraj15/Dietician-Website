@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="/app.css">
+    <script src="/code.js"></script>
+</head>
+
+<body>
+    <main class="bmi-app">
+        <div>
+            <h1>BMI Calculator</h1>
+        </div>
+        <div class="holder">
+            <div class="container">
+
+                <!-- Age section -->
+
+                <div class="age">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" required>
+                </div>
+
+                <!-- Gender section -->
+
+                <div class="gender">
+                    <label for="gender">Gender:</label>
+                    <select name="gender" id="gender-picker">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+
+                <!-- Weight and height section -->
+
+                <div class="weight">
+                    <label for="weight-number">WEIGHT</label>
+                    <input type="number" class="weight" id="weight-number" required>
+                </div>
+                <div class="height">
+                    <label for="height-number">HEIGHT</label>
+                    <input type="number" class="height" id="height-number" required>
+                </div>
+
+                <!-- Buttons section -->
+
+                <div class="calculate-button">
+                    <button class="calculate" id="submit-calci" onclick="calculateBmi()">calculate</button>
+                    <button class="clear" onclick="reloadPage()">Clear</button>
+                </div>
+            </div>
+
+            <!-- gauge indicator-->
+
+            <div class="result">
+                <div class="gauge">
+                    <div class="gauge__body">
+                        <div class="gauge__fill"></div>
+                        <div class="gauge__cover"></div>
+                    </div>
+                </div>
+                <div class="text-result">
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
