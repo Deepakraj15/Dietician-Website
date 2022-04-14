@@ -33,6 +33,8 @@ function calculateBmi() {
 }
 
 function setGaugeValue(gauge, value, bmr) {
+    const result = document.querySelector('.result');
+
     if (value <= 18.49) {
         gauge.querySelector(".gauge__fill").style.transform = `rotate(${15
             }deg)`;
@@ -50,9 +52,18 @@ function setGaugeValue(gauge, value, bmr) {
         gauge.querySelector(".gauge__cover").textContent = `${Math.round(value)} Obese`;
     }
     result.querySelector(".text-result").innerText = `You need to take ${Math.round(bmr)} calories a day`;
+
 }
+/** load and reload */
+
+// load home page
+
+function loadCreateAcc() {
+    window.location = '/newuser.html'
+}
+
+// relaod page
 function reloadPage() {
     location.reload()
-
 }
 

@@ -1,0 +1,54 @@
+body {
+    background-color: black;
+    color: azure;
+    font-weight: 300;
+
+}
+
+.container {
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+select {
+    padding: 1px 2px 1px 2px;
+    width: 170px;
+    float: right;
+}
+
+form {
+
+    padding: 50px 70px 50px 70px;
+    border: 1px solid azure;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.child input {
+    float: right;
+}
+
+main div:nth-child(6) {
+    margin-top: 20px;
+}
+
+main div {
+    margin-bottom: 20px;
+}
+
+.tc {
+    display: flex;
+
+}
+
+.child button {
+    background-color: rgb(77, 152, 239);
+    color: azure;
+    height: 30px;
+    width: 100%;
+}
