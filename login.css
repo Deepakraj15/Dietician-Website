@@ -3,13 +3,15 @@ body {
     background-size: 100%;
 }
 
+/* nav bar styling*/
+
 .nav-bar {
     margin: -10px;
     background-color: black;
     display: flex;
     align-items: center;
     width: 101.2%;
-    height: 100px;
+    height: 75px;
 }
 
 .createacc {
@@ -21,7 +23,7 @@ body {
     background-color: #05595B;
     color: azure;
     border-radius: 10px;
-    margin-top: 30px;
+    margin-top: 35px;
     width: 70px;
     height: 30px;
     margin-right: 50px;
@@ -33,15 +35,6 @@ body {
     display: flex;
     justify-content: center;
 
-}
-
-.quote {
-    font-size: 40px;
-    display: flex;
-    margin-top: 150px;
-    font-weight: 700;
-    font-style: italic;
-    text-indent: 2px;
 }
 
 .blur-box {
@@ -57,6 +50,7 @@ body {
     background-color: whitesmoke;
 }
 
+/* Login from styling */
 .login-form {
     background-image: url(/images/blurbox\ image.jpg);
     background-size: 180%;
@@ -130,3 +124,5 @@ a {
     font-size: 19px;
     font-weight: 700;
 }
+
+/* Footer styling - not yet added tho*/

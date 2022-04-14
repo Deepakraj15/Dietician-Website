@@ -1,4 +1,6 @@
 
+/** Login Page */
+
 function loginCredentials() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
@@ -10,8 +12,10 @@ function loginCredentials() {
         alert("invalid password");
     }
 }
+
+/** BMI and BMR calculator */
+
 function calculateBmi() {
-    const calculateBtn = document.getElementById('submit-calci');
     const weight = document.getElementById('weight-number').value;
     const age = document.getElementById('age').value;
     const height = document.getElementById('height-number').value;
@@ -31,6 +35,8 @@ function calculateBmi() {
 
 
 }
+
+// setting gauge 
 
 function setGaugeValue(gauge, value, bmr) {
     const result = document.querySelector('.result');
@@ -54,6 +60,8 @@ function setGaugeValue(gauge, value, bmr) {
     result.querySelector(".text-result").innerText = `You need to take ${Math.round(bmr)} calories a day`;
 
 }
+
+
 /** load and reload */
 
 // load home page
@@ -62,7 +70,7 @@ function loadCreateAcc() {
     window.location = '/newuser.html'
 }
 
-// relaod page
+// relaod current page
 function reloadPage() {
     location.reload()
 }
