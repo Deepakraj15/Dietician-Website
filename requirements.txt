@@ -1,0 +1,10 @@
+Requirements includes:
+
+npm install express --save
+npm install mssql --save
+npm install msnodesqlv8 --save
+npm install @tensorflow/tfjs  --save
+
+or 
+
+npm install @tensorflow/tfjs-node --save

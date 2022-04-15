@@ -1,6 +1,9 @@
 {
   "dependencies": {
+    "type": "module",
+    "@tensorflow/tfjs": "^3.15.0",
     "express": "^4.17.3",
+    "msnodesqlv8": "^2.4.7",
     "mssql": "^8.1.0"
   }
 }
