@@ -1,18 +1,20 @@
 * {
-    font-family: sans-serif, 'Times New Roman', Times, serif;
+    font-family: sans-serif;
 }
 
 body {
-    background-color: black;
+    background-color: #4b7db4;
     width: 99%;
     height: 100%;
     display: flex;
     text-align: center;
     justify-content: center;
+
 }
 
 .bmi-app {
-    background-color: azure;
+    background-color: #e5dcc3;
+    border-radius: 10px;
     width: 700px;
     height: 700px;
     display: flex;
@@ -23,16 +25,18 @@ body {
 }
 
 h1 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 1px;
     font-weight: 700;
 
 }
 
 .holder {
+    background-color: #c7bea2;
     border: 1px solid red;
     width: 500px;
     height: 500px;
     display: block;
+    border-radius: 10px;
     align-items: center;
 }
 
@@ -52,7 +56,9 @@ label,
     font-weight: 700;
 }
 
+
 .gender {
+    width: inherit;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -69,8 +75,8 @@ label,
 }
 
 select {
-    margin-left: 15px;
-    width: 150px;
+    border-radius: 10px;
+    width: 180px;
     height: 23px;
     text-align: center;
 }

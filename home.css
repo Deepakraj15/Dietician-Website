@@ -1,122 +1,175 @@
+body {
+    background-image: url(/images/folder/Untitled.png);
+    background-size: cover;
+}
 
-body
-{
-    background-image: url(/images/Untitled.png);
-    background-size:cover; 
-}
-.home-contanier
-{
-   position: relative;
+.home-contanier {
+    display: flex;
+    justify-content: self;
+    flex-direction: column;
+    position: relative;
     width: 100%;
-    height: 1800px;
-    
+    height: 100px;
+
 }
-.home-contanier footer
-{
-    bottom:0;
-    position:absolute;
-}
-.homepage-nav
-{
+
+.homepage-nav {
     display: flex;
     align-items: center;
-    background-color:black;
-    width:100%;
-    height:110px;
+    background-color: black;
+    width: 100%;
+    height: 110px;
 }
-.logo-img
-{
+
+.logo-img {
     border-radius: 50%;
     max-width: 120px;
-    max-height:120px;
+    max-height: 120px;
 }
-.login-btn-home{
+
+.login-btn-home {
     letter-spacing: 1px;
     font-size: 20px;
-    font-weight:700;
-    margin-left:50px;
-    height:40px;
-    width:90px;
-    background-color:#055958;
-    color:azure;
+    font-weight: 700;
+    margin-left: 50px;
+    height: 40px;
+    width: 90px;
+    background-color: #055958;
+    color: azure;
     border-radius: 15px;
 }
-.login-btn-home:hover{
-    background-color:#055958;
-    color:black;
+
+.login-btn-home:hover {
+    background-color: #055958;
+    color: black;
     transform: translateY(-2px);
 }
-.quote{
-    padding-left:35px ;
-    font-size: 40px;
-    font-weight: bold;
-    font-family:'Abril Fatface', cursive;;
-    color: azure;
+
+.holder {
+    display: flex;
+
+    flex-direction: column;
+    margin-top: 300px;
 }
-.about a
-{
-    font-weight:bold;
+
+.mySlidesfade {
+    background-color: azure;
+
+}
+
+/* Slideshow container */
+.slideshow-container {
+    border: azure 1px solid;
+    box-shadow: 0px 0px 10px 2px azure;
+    overflow: hidden;
+    display: flex;
+    max-width: 900px;
+    position: relative;
+    margin: 0 0 0 0;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+
+    height: 15px;
+    width: 15px;
+    background-color: azure;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dotholder {
+    margin-left: 25%;
+}
+
+.active {
+    background-color: #055958;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.about a {
+    font-weight: bold;
     letter-spacing: 1px;
     font-size: 20px;
     color: #055958;
-    margin-left:1100px;
+    margin-left: 1100px;
     text-decoration: none;
 }
-.footer-home
-{
-    border:#055958 solid 1px;
-    width:100%;
-    height:120px;
+
+.footer-home {
+    position: relative;
+    bottom: -1500px;
+    border: #055958 solid 1px;
+    width: 100%;
+    height: 120px;
     background-color: azure;
-    display:flex;
+    display: flex;
     background-color: black;
     align-items: center;
 }
 
 
-.footer-home div
-{
+.footer-home div {
     color: azure;
 }
-.footer-home div a
-{
+
+.footer-home div a {
     text-decoration: none;
-    color:azure;
+    color: azure;
 }
-.contacts
-{
-    margin-left:100px;
+
+.contacts {
+    margin-left: 100px;
 }
-.conditions-cont
-{
-    margin-left:200px;
-}
-.others
-{
+
+.conditions-cont {
     margin-left: 200px;
 }
-.follow-us
-{
+
+.others {
+    margin-left: 200px;
+}
+
+.follow-us {
     margin-left: 300px;
-    display: flex; 
+    display: flex;
     align-items: center;
     justify-content: center;
 }
-.follow-us .wrap a
-{
+
+.follow-us .wrap a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:azure;
-    border-radius:50%;
-    margin-left:10px;
+    background-color: azure;
+    border-radius: 50%;
+    margin-left: 10px;
 }
-.follow-us .wrap a :hover{
-    background-color:#055958;
+
+.follow-us .wrap a :hover {
+    background-color: #055958;
     border-radius: inherit;
 }
-.follow-us img
-{
+
+.follow-us img {
     max-width: 40px;
     max-height: 40px;
 }

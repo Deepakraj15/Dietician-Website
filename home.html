@@ -16,49 +16,99 @@
     <nav class="homepage-nav">
         <a href="/about"><img class="logo-img" src="/images/logo.jpeg" alt="something wrong"></a>
         <div class="about"><a href="/about.html">About US</a></div>
-        <button class="login-btn-home">Sign In</button>
+        <button class="login-btn-home" onclick="window.location='/login.html'">Sign In</button>
 
     </nav>
 
     <!-- main container to hold things :) -->
 
     <main class="home-contanier">
+        <!-- image slider-->
+        <div class="holder">
+            <div class="slideshow-container">
+                <div class="mySlidesfade">
+                    <img src="/images/home-slide/pexels-jessica-lewis-creative-992816.jpg" style="width:100%">
+                </div>
+                <div class="mySlidesfade">
+                    <img src="/images/home-slide/pexels-photomix-company-175996.jpg" style="width:100%">
+                </div>
+                <div class="mySlidesfade">
+                    <img src="/images/home-slide/pexels-suzy-hazelwood-1120581.jpg" style="width: 100%" alt="">
+                </div>
+                <div class="mySlidesfade">
+                    <img src="/images/home-slide/pexels-trang-doan-2027696.jpg" style="width: 100%" alt="">
+                </div>
+                <div class="mySlidesfade">
+                    <img src="/images/home-slide/pexels-trang-doan-793768.jpg" style="width: 100%" alt="">
+                </div>
+            </div>
+            <br>
+            <div class="dotholder">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <script>
+                // slider - home page
+                let slideIndex = 0;
+                showSlides();
 
-        <!-- Footer -->
-        <footer class="footer-home">
-            <div class="contacts">
-                <div class="mobile">contacts:9344695977</div>
-                <br>
-                <div class="email">abc@gmail.com</div>
-            </div>
-            <div class="conditions-cont">
-                <div class="conditions"> <a href="/terms">terms of use</a> </div>
-                <br>
-                <div class="about-text"><a href="/about.html"> About our mission</a></div>
-            </div>
-            <div class="others">
-                <div class="faq"><a href="/faq">FAQ</a> </div>
-                <br>
-                <div class="feedback"><a href="/feeback">Feedback</a> </div>
-            </div>
-            <div class="follow-us">
-                <div class="wrap">
-                    <a href=""> <img src="/images/icons/instagram-circled-black.webp" alt="instagram-icon"></a>
-                </div>
-                <div class="wrap">
-                    <a href=""> <img src="/images/icons/twitter-circled-black.webp" alt="instagram-icon"></a>
-                </div>
-                <div class="wrap">
-                    <a href=""><img src="/images/icons/reddit-circled-black.webp" alt="instagram-icon"></a>
-                </div>
-
-                <div class="wrap">
-                    <a href=""><img src="/images/icons/youtube-circled-blak.webp" alt="instagram-icon"></a>
-                </div>
-
-            </div>
-        </footer>
+                function showSlides() {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlidesfade");
+                    let dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) { slideIndex = 1 }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+            </script>
+        </div>
     </main>
+    <!-- Footer -->
+
+    <footer class="footer-home">
+        <div class="contacts">
+            <div class="mobile">contacts:9344695977</div>
+            <br>
+            <div class="email">abc@gmail.com</div>
+        </div>
+        <div class="conditions-cont">
+            <div class="conditions"> <a href="/terms">terms of use</a> </div>
+            <br>
+            <div class="about-text"><a href="/about.html"> About our mission</a></div>
+        </div>
+        <div class="others">
+            <div class="faq"><a href="/faq">FAQ</a> </div>
+            <br>
+            <div class="feedback"><a href="/feeback">Feedback</a> </div>
+        </div>
+        <div class="follow-us">
+            <div class="wrap">
+                <a href=""> <img src="/images/icons/instagram-circled-black.webp" alt="instagram-icon"></a>
+            </div>
+            <div class="wrap">
+                <a href=""> <img src="/images/icons/twitter-circled-black.webp" alt="instagram-icon"></a>
+            </div>
+            <div class="wrap">
+                <a href=""><img src="/images/icons/reddit-circled-black.webp" alt="instagram-icon"></a>
+            </div>
+
+            <div class="wrap">
+                <a href=""><img src="/images/icons/youtube-circled-blak.webp" alt="instagram-icon"></a>
+            </div>
+
+        </div>
+    </footer>
 </body>
 
 </html>

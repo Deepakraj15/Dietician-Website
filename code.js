@@ -9,7 +9,7 @@ function loginCredentials() {
         return false;
     }
     else {
-        alert("invalid password");
+        alert('invalid vruhh');
     }
 }
 
@@ -74,4 +74,3 @@ function loadCreateAcc() {
 function reloadPage() {
     location.reload()
 }
-
