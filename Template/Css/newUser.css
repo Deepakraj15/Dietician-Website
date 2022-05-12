@@ -1,0 +1,76 @@
+:root {
+    --goodblue: #2F2FA2;
+    --blackgrey: #4c5263;
+    --brownishmaroon: #99738e;
+    --notorange: #f64c72;
+    --kindablue: #28bccf;
+    --orange: #FFA500;
+
+}
+
+body {
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.7));
+    background-color: var(--blackgrey);
+    overflow: hidden;
+    color: azure;
+    font-weight: 300;
+
+}
+
+input {
+    font-weight: 600;
+    text-indent: 10px;
+    border: none;
+    border-radius: 7px;
+    letter-spacing: 1px;
+}
+
+.container {
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+select {
+    border-radius: 7px;
+    padding: 1px 2px 1px 2px;
+    width: 182px;
+    float: right;
+
+}
+
+form {
+    border-radius: 10px;
+    padding: 50px 70px 50px 70px;
+    border: 5px solid azure;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.child input {
+    float: right;
+}
+
+main div:nth-child(6) {
+    margin-top: 20px;
+}
+
+main div {
+    margin-bottom: 20px;
+}
+
+.tc {
+    display: flex;
+
+}
+
+.child button {
+    background-color: rgb(77, 152, 239);
+    color: azure;
+    height: 30px;
+    width: 100%;
+}

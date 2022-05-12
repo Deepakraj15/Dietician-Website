@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="/Template/Css/loginBMI.css">
+    <script src="/code.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+
+    <nav class="nav-bar">
+        <div class="brandname">
+            <a href="/home.html">
+                <img src="/images/logo.jpeg" alt="image not found" class="logo">
+            </a>
+        </div>
+        <div class="createacc">
+            <button class="signup" onclick="loadCreateAcc()">Sign up</button>
+        </div>
+    </nav>
+
+    <!-- Main container -->
+
+    <main class="homepage-container">
+        <div class="line-holder">
+            <div class="login-form">
+
+                <div class="login-wording">LOGIN</div>
+                <br>
+                <div class="userinfo">
+                    <div class="usercont">
+                        <label for="username">Username</label>
+                        <br>
+                        <input type="text" id="username" placeholder="Username" required max="15">
+                    </div>
+                    <br>
+                    <div class="passcont">
+                        <label for="password">Password</label>
+                        <br>
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <br>
+                    <div class="buttoncont">
+                        <button class="login-btn" onclick="loginCredentials()">LOGIN</button>
+                    </div>
+                </div>
+
+
+                <div class="display-txt">Invalid username or password</div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

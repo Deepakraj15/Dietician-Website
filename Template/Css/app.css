@@ -1,0 +1,211 @@
+:root {
+    --goodblue: #2F2FA2;
+    --blackgrey: #4c5263;
+    --brownishmaroon: #99738e;
+    --notorange: #f64c72;
+    --vkindablue: #28bccf;
+    --orange: #FFA500;
+
+}
+
+* {
+    margin: 0;
+    font-weight: 700;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #28bccf, #50a2ad, #58898f, #4c5263, #212329) no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+
+
+.bmi-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 200px 0 200px;
+
+}
+
+.holder {
+    background-color: var(--blackgrey);
+
+}
+
+input {
+    text-indent: 15px;
+    float: right;
+    width: 130px;
+    height: 25px;
+    border-radius: 7px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 430px;
+    height: 430px;
+    border: 5px solid var(--notorange);
+    border-radius: 40px;
+}
+
+.container div {
+
+    width: 100%;
+    margin-top: 30px;
+}
+
+h1 {
+    position: absolute;
+    background-color: var(--blackgrey);
+    padding: 10px;
+    border-radius: 10px;
+    color: azure;
+    right: 870px;
+    letter-spacing: 1.5px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.gender {
+    flex-direction: row;
+}
+
+label {
+    margin-left: 30px;
+    font-size: 17px;
+}
+
+input,
+select {
+    margin-right: 30px;
+}
+
+select {
+    float: right;
+}
+
+#gender-picker {
+    min-height: 25px;
+    border-radius: 7px;
+    min-width: 130px;
+}
+
+.calculate-button button {
+    font-size: 15px;
+    letter-spacing: 2px;
+    background-color: var(--notorange);
+    color: azure;
+}
+
+.calculate-button button:hover {
+    background-color: var(--blackgrey);
+}
+
+.calculate {
+    width: 175px;
+    height: 25px;
+    margin-left: 50px;
+    border-radius: 7px;
+}
+
+.clear {
+    float: right;
+    width: 100px;
+    height: 25px;
+    margin-right: 50px;
+    border-radius: 7px;
+}
+
+.gauge {
+    margin: 10px 0 0 120px;
+    width: 100%;
+    max-width: 250px;
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    color: azure;
+}
+
+.gauge__body {
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: azure;
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+}
+
+.gauge__fill {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    background: var(--notorange);
+    transform-origin: center top;
+    transform: rotate(0.25turn);
+    transition: transform 0.2s ease-out;
+}
+
+.gauge__cover {
+    width: 75%;
+    height: 150%;
+    background: var(--blackgrey);
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* Text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+}
+
+.others {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.indicatorindex img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.indexholder {
+    margin-bottom: 30px;
+}
+
+.text-result {
+    visibility: hidden;
+    font-family: cursive;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+    border-top: 3px solid var(--goodblue);
+    height: 100px;
+    width: 500px;
+}

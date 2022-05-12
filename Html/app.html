@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="/Template/Css/app.css">
+    <script src="/code.js"></script>
+</head>
+
+<body>
+
+
+    <main class="bmi-app">
+        <div>
+            <h1>BMI CACULATOR</h1>
+        </div>
+        <div class="container">
+
+            <!-- Age section -->
+
+            <div class="age">
+                <label for="age">AGE:</label>
+                <input type="number" id="age" required>
+            </div>
+
+            <!-- Gender section -->
+
+            <div class="gender">
+                <label for="gender">GENDER: </label>
+                <select name="gender" id="gender-picker" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <!-- Weight and height section -->
+
+            <div class="weight">
+                <label for="weight-number">WEIGHT:</label>
+                <input type="number" class="weight" id="weight-number" required>
+            </div>
+            <div class="height">
+                <label for="height-number">HEIGHT:</label>
+                <input type="number" class="height" id="height-number" required>
+            </div>
+
+            <!-- Buttons section -->
+
+            <div class="calculate-button">
+                <button class="calculate" id="submit-calci" onclick="calculateBmi()">Calculate</button>
+                <button class="clear" onclick="reloadPage()">Clear</button>
+            </div>
+        </div>
+
+    </main>
+    <div class="others">
+        <div class="indicatorindex">
+            <img src="/Template/Images/transparent-health-checkups-icon-bmi-icon-5f328f91d808d2.2724244815971490738849.png"
+                alt="">
+        </div>
+        <div class="indexholder">
+            <!-- gauge indicator-->
+
+            <div class="gauge">
+                <div class="gauge__body">
+                    <div class="gauge__fill"></div>
+                    <div class="gauge__cover"></div>
+                </div>
+            </div>
+
+            <div class="text-result">
+                <div>Your <span class="bmr">BMR</span>
+                    <p class="value"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
