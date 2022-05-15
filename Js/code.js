@@ -4,12 +4,11 @@
 function loginCredentials() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    if (username == "Deepak" && password == "Deepak") {
+    if (findUser(username, password)) {
         window.location = "/home.html";
-        return false;
     }
     else {
-        alert('invalid vruhh');
+        document.querySelector('display-text').style.display = 'block';
     }
 }
 
