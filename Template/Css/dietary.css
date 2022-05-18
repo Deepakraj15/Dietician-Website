@@ -1,4 +1,9 @@
 :root {
+    --goodblue: #2F2FA2;
+    --blackgrey: #4c5263;
+    --brownishmaroon: #99738e;
+    --notorange: #f64c72;
+    --kindablue: #28bccf;
     --greycastle: #8D99AE;
     --perfectblack: #2B2D42;
     --whitedevil: #EDF2F4;
@@ -12,22 +17,100 @@
     padding: 0;
 }
 
+html {
+    background: linear-gradient(to top, var(--notorange), var(--kindablue));
+    height: 100%;
+}
+
 body {
     overflow: hidden;
-    background-color: var(--greycastle);
+}
+
+.nav-bar {
+    width: 100%;
+    height: 100px;
+}
+
+
+.ham button {
+    background-color: transparent;
+    width: fit-content;
+    height: fit-content;
+}
+
+.ham button img {
+    max-height: 50px;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    margin-left: 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 15px 16px;
+    background-color: inherit;
+    font-family: inherit;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    margin-left: 20px;
+    border-radius: 8px;
+    display: none;
+    position: absolute;
+    background-color: var(--blackgrey);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 17px;
+    float: none;
+    color: azure;
+    padding: 11px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: var(--notorange);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 h1 {
-    margin: 10px 0 0 10px;
-    border: 2px solid var(--scarletred);
+    top: 10px;
+    position: absolute;
+    color: var(--whitedevil);
+    margin: 10px 10px 0 0;
     border-radius: 10px;
-    width: fit-content;
+    width: 98%;
     font-size: 40px;
     font-weight: 700;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 .table-head {
+    color: var(--whitedevil);
+    background-color: var(--notorange) !important;
+    text-align: center;
     font-size: 20px;
     letter-spacing: 1px;
     font-weight: 700;
@@ -35,18 +118,38 @@ h1 {
 
 .table-holder {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-table,
+table {
+    border: 5px solid var(--blackgrey);
+    border-radius: 20px;
+    padding: 20px 20px 10px 20px;
+}
+
 td {
-    border: 1px solid red;
+    border-radius: 9px;
+    border: 1px solid var(--notorange);
     padding: 10px 20px 10px 20px;
 }
 
-tr:nth-child(even) {
-    background-color: red;
+.edit {
+    width: 50px;
+    height: 50px;
+    background-color: var(--scarletred);
+    position: relative;
+    right: 500px;
+}
+
+td:nth-child(n) {
+    background-color: azure;
+}
+
+td:hover:nth-child(n) {
+    color: var(--whitedevil);
+    background-color: var(--perfectblack);
+
 }
