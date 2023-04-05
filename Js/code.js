@@ -62,26 +62,3 @@ function setGaugeValue(gauge, value, bmr) {
 
 /* drop down display */
 
-function dropdowndisplay() {
-    document.querySelector('.dropvalues').style.display = 'flex';
-
-}
-
-/**creating divs for scheduler */
-
-function createDiv() {
-
-}
-
-/** load and reload */
-
-// load home page
-
-function loadCreateAcc() {
-    window.location = '/newuser.html'
-}
-
-// relaod current page
-function reloadPage() {
-    location.reload()
-}
