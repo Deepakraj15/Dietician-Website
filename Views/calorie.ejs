@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <link rel="stylesheet" href="/calorie.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+
+<body>
+    <div class="chart-cont">
+        <canvas id="myChart" width="700px" height="700px"></canvas>
+        <script defer>
+           const dates = '<%= dateList%>'
+           const valuesDates = dates.split(',');
+           console.log( valuesDates)
+    const calories = '<%= calorieList %>';
+    const valuesCalories = calories.split(',');
+            console.log(valuesCalories);
+    const data = {
+        labels: valuesDates,
+            datasets: [{
+                label: 'Calories consumed by dates',
+                data:valuesCalories,
+                backgroundColor: 'rgb(255,255,255)',
+                borderColor: 'rgb(255,255,255)',
+                borderWidth: 1,
+                tension: 0.1,
+                fill:false,
+            }]
+        };
+
+        const container = document.querySelector('#myChart');
+        new Chart(container, {
+            type: 'line',
+  data: data,
+  options: {
+    responsive: true,
+    scales: {
+      x: {
+        display: true,
+        title: {
+          display: true,
+          text: 'Day',
+          color: 'rgb(255,255,255)'
+        },
+        ticks: {
+          color: 'white', // Sets the color of the y-axis labels to white
+        },
+        
+
+      },
+      y: {
+        display: true,
+        title: {
+          display: true,
+          text: 'Calories',
+          color: 'rgb(255,255,255)'
+        },
+        beginAtZero: true,
+      
+       ticks: {
+          color: 'white' 
+        },
+       
+      },
+      
+    },
+    plugins: {
+      title: {
+        display: true,
+        text: 'Calorie Tracker'
+      },
+      legend: {
+        display: true,
+        position: 'bottom'
+      }
+    }
+  }
+        });
+
+    </script>
+    </div>
+    <div class="aside">
+    <form action="/addData" method="get">
+    UPDATE FIELD
+    <p class ="date"></p>    
+        <input type="number" name="weight" placeholder="Weight"  required>
+        <input type="number" name="height" placeholder="height" required>
+        <input type="number" name="calorie" placeholder="calories" required>
+        <button class="update">Update</button>
+    </form>
+    
+    <div class="BMR-field">
+      
+        <p class="output">Your BMI Value is <%=urlvalue%></p>
+    </div>
+    <script>
+        const newDate = document.getElementsByClassName('date')[0];
+        newDate.innerHTML=new Date().toLocaleDateString();
+    </script>
+</div>
+</body>
+
+</html>

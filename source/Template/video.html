@@ -1,128 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="stylesheet" href="/video.css">
+  </head>
+  <body>
+    <div class="youtube-container">
+    
+    
+          <script>
+              function renderPlaylistVideos(playlistId, apiKey, pageToken) {
+              // Set up the API endpoint
+              let apiUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=${playlistId}&key=${apiKey}`;
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video player</title>
-    <link rel="stylesheet" href="/Template/Css/video.css">
-</head>
+              // If there's a page token, add it to the API URL
+              if (pageToken) {
+                apiUrl += `&pageToken=${pageToken}`;
+              }
 
-<body>
-    <nav class="nav-bar">
-        <div class="menu">
-            <div class="ham">
-                <div class="dropdown">
-                    <button class="dropbtn">
-                        <img src="/Template/Icons/hamburger_icon.png" alt="">
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="/Html/app.html">BMI Calculator</a>
+              // Fetch the playlist data from the API
+              fetch(apiUrl)
+                .then((result) => result.json())
+                .then((data) => {
+                  // Render the videos on the page
+                  let videos = data.items;
+                  var videoContainer = document.querySelector(".youtube-container");
+                  for (let video of videos) {
+                    videoContainer.innerHTML += `
+                      
+                        <iframe class="video-player"  src="https://www.youtube.com/embed/${video.contentDetails.videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                      `;
+                  }
 
-                        <a href="/Html/dietary.html">Daily record Tracker</a>
-                        <a href="#">Food recommender<sup>&#x1F451</sup></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="video-container">
-        <h1>Weight Loss</h1>
-        <div class="weight-loss">
-            <div class="container">
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FUoWni1cqEc"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="title">
-                    <p>YOGA</p>
-                </div>
-            </div>
-            <div class="container">
-                <div class="video">
-                    <iframe src="https://www.youtube.com/embed/2MoGxae-zyo" title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="title">
-                    <p>WORKOUT</p>
-                </div>
-            </div>
-            <div class="container">
-                <div class="video">
-                    <iframe src="https://www.youtube.com/embed/t7RhG0CEbVw" title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="title">
-                    <p>YOGA</p>
-                </div>
-            </div>
-            <div class="container">
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/UVJSiuWBNYM"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="title">
-                    <p>WORKOUT</p>
-                </div>
-            </div>
+                  // If there's a next page token, fetch the next page of results
+                  if (data.nextPageToken) {
+                    renderPlaylistVideos(playlistId, apiKey, data.nextPageToken);
+                  }
+                })
+                .catch((error) => console.error(error));
+            }
 
-        </div>
-        <h1>Weight Gain</h1>
-        <div class="weight-loss">
-            <div class="container">
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/WwASmxrIEiI"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="title">
-                    <p>INFORMATIVE</p>
-                </div>
-            </div>
-            <div class="container">
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RUaN-LGZ6X0"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="title">
-                    <p>WORKOUT</p>
-                </div>
-            </div>
-            <div class="container">
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/gnTzk1yUHB4"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="title">
-                    <p>BLOG</p>
-                </div>
-            </div>
-            <div class="container">
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HKPrBRvLPBo"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="title">
-                    <p>WORKOUT</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</body>
-
+            // Call the function with the playlist ID and API key
+            renderPlaylistVideos("PL1eHzHCwTqX4baf6EunOb2QRF4BuliE_g", "AIzaSyD-Pa2zdeWCZLn6vRLyibxNX3I1x8pHA5Q");
+          </script>
+       </div>
+  </body>
 </html>
+
+
+
+

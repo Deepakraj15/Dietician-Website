@@ -6,161 +6,24 @@
     --kindablue: #28bccf;
 
 }
-
-
-body {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    background: url("/Template/Images/videos\ bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
-* {
-    border: 0;
+*
+{
     margin: 0;
 
 }
 
-h1 {
-    color: azure;
-    margin: 10px 20px 0 60px;
-    background-color: var(--goodblue);
-    width: fit-content;
-    padding: 5px;
-    border-radius: 7px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: 3px;
-    font-weight: bolder;
-}
-
-
-.nav-bar {
-    width: 100%;
-    height: 100px;
-}
-
-.menu {
-    margin-right: 63%;
-}
-
-.ham button {
-    background-color: transparent;
-    width: fit-content;
-    height: fit-content;
-}
-
-.ham button img {
-    max-height: 50px;
-}
-
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-/* Dropdown button */
-.dropdown .dropbtn {
-    margin-left: 20px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-    margin-left: 20px;
-    border-radius: 8px;
-    display: none;
-    position: absolute;
+.youtube-container{
+    height:fit-content;
     background-color: var(--blackgrey);
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+     display: flex;
+     
+    flex-wrap: wrap;
+
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-size: 17px;
-    float: none;
-    color: azure;
-    padding: 11px 15px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: var(--notorange);
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.container {
-    margin-left: 50px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-
-.video {
-    margin: 10px 0 0 10px;
+.video-player{
     border-radius: 10px;
-    background-color: var(--blackgrey);
-}
-
-.weight-loss {
-    display: flex;
-    border: 10px;
-    width: 100%;
-    height: 300px;
-    border-bottom: 1px solid azure;
-}
-
-iframe {
-    margin: 10px 0 0 0;
-    border-radius: 10px;
-    width: 300px;
-    height: 200px;
-}
-
-iframe:hover {
-    transform: translateY(-10px);
-}
-
-
-
-.title {
-    margin: 2px 0 0 10px;
-    min-height: 30px;
-    width: 300px;
-    background-color: var(--notorange);
-    border-radius: 10px;
-    text-align: center;
-}
-
-.title:hover {
-    background-color: var(--blackgrey);
-}
-
-p {
-    font-family: cursive;
-    margin-top: 5px;
-    letter-spacing: 3px;
-    color: azure;
-    font-weight: 800;
-    font-size: 19px;
+    margin: 20px;
+    width:300px;
+    height:200px;
 }

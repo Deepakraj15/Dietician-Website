@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dietplan.css">
+    <title>FoodRecommender</title>
+</head>
+<body>
+    <h1>Get Food Recommendations </h1>
+    <form action="/foodrecommendations" method="get">
+        <input type="number" name="age" required placeholder="Age">
+        <span>
+        <label>Veg<input type="radio" name="veg"  value="0" required></label>
+        <label>Non Veg<input type="radio" name="veg"  value="1" required></label>
+        </span>
+        <input type="number" name="weight" placeholder="Weight"required>
+        <input type="number" name="height" placeholder="Height" required>
+        <span>
+        <label >Weight Loss<input type="radio" name="choice" value="1"></label>
+        <label >Weight Gain<input type="radio" name="choice" value="2"></label>
+        <label >Stay Healthy<input type="radio" name="choice" value="3"></label>
+        </span>
+        <button class="submit-btn">Submit</button>
+    </form>
+</body>
+</html>
